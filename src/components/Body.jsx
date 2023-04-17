@@ -12,11 +12,13 @@ export default function Body() {
         {arrayWeGetFromAPI.map((item) => (
           <Article
             title={item.title}
+            url={item.url}
             points={item.points}
             author={item.author}
             time={item.created_at_i}
             visibility={true}
             comments={item.num_comments}
+            id={item.objectID}
           />
         ))}
       </ol>
