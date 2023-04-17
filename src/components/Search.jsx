@@ -10,3 +10,6 @@ export default function Search() {
         </div>
     )
 }
+
+
+/* This is just for me for the future -  search rule - max 1 char deviance and max -1 string length
