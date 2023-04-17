@@ -12,4 +12,4 @@ export default function Search() {
 }
 
 
-/* This is just for me for the future -  search rule - max 1 char deviance and max -1 string length
+/* This is just for me for the future -  search rule - max 1 char deviance and max -1 string length*/
