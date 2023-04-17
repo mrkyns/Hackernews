@@ -99,7 +99,41 @@ nav ul li a:hover {
 /* ==============================
             Search
 ============================== */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.search_wrapper {
+  height: 45px;
+  border-radius: 10px;
+  background-color: #00000029
+}
+
+.search_input {
+  width: 650px;
+  min-height: -webkit-fill-available;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #00000029
+}
+
+.search_input::placeholder {
+  color: black;
+  text-indent: 15px;
+}
+
+.search_button {
+  width: 110px;
+  border: none;
+  min-height: -webkit-fill-available;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #00000029;
+  border-left: 5px solid #FF6600;
+}
 /* ==============================
             Article
 ============================== */
