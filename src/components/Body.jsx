@@ -9,7 +9,7 @@ export default function Body({ fetchedData = [], setQuery }) {
   console.log(fetchedData);
   return (
     <div className="Body">
-      <Search />
+      <Search  fetchedData={fetchedData} setQuery={setQuery}/>
       <ol>
         {fetchedData.map((item) => (
           <Article

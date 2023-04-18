@@ -1,4 +1,4 @@
-export default function Search() {
+export default function Search( {fetchedData, setQuery} ) {
   return (
     <div className="Search">
       <div className="search_wrapper">
