@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 
 export default function Body({ fetchedData = [], setQuery }) {
   // const fetchedData = [...someDummyData.hits];
-  console.log(fetchedData);
+  // console.log(fetchedData);
   return (
     <div className="Body">
       <Search  fetchedData={fetchedData} setQuery={setQuery}/>
