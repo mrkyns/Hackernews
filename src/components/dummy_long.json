@@ -1,0 +1,768 @@
+{
+  "hits": [
+    {
+      "created_at": "2019-05-07T18:27:42.000Z",
+      "title": "Css-only-chat: A truly monstrous async web chat using no JS on the front end",
+      "url": "https://github.com/kkuchta/css-only-chat",
+      "author": "bennylope",
+      "points": 1010,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 148,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1557253662,
+      "relevancy_score": 8818,
+      "_tags": ["story", "author_bennylope", "story_19852105"],
+      "objectID": "19852105",
+      "_highlightResult": {
+        "title": {
+          "value": "Css-only-chat: A truly monstrous async web chat using no <em>JS on</em> the front end",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/kkuchta/css-only-chat",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "bennylope",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2016-11-05T11:03:15.000Z",
+      "title": "Show HN: Make an app by adding JSON to this app",
+      "url": "https://github.com/Jasonette/JASONETTE-iOS?hn",
+      "author": "gliechtenstein",
+      "points": 648,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 176,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1478343795,
+      "relevancy_score": 7057,
+      "_tags": ["story", "author_gliechtenstein", "story_12879179", "show_hn"],
+      "objectID": "12879179",
+      "_highlightResult": {
+        "title": {
+          "value": "Show HN: Make an app by adding <em>JSON</em> to this app",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/Jasonette/JASONETTE-iOS?hn",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "gliechtenstein",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-12-08T22:33:31.000Z",
+      "title": "Show HN: This website is valid JSON",
+      "url": "https://webdatarender.com/",
+      "author": "gpnt",
+      "points": 604,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 229,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1607466811,
+      "_tags": ["story", "author_gpnt", "story_25352385", "show_hn"],
+      "objectID": "25352385",
+      "_highlightResult": {
+        "title": {
+          "value": "Show HN: This website is valid <em>JSON</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://webdatarender.com/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "gpnt",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-02-21T03:53:23.000Z",
+      "title": "Simdjson – Parsing Gigabytes of JSON per Second",
+      "url": "https://github.com/lemire/simdjson",
+      "author": "cmsimike",
+      "points": 598,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 196,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1550721203,
+      "relevancy_score": 8670,
+      "_tags": ["story", "author_cmsimike", "story_19214387"],
+      "objectID": "19214387",
+      "_highlightResult": {
+        "title": {
+          "value": "Simdjson – Parsing Gigabytes of <em>JSON</em> per Second",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/lemire/simdjson",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "cmsimike",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-05-06T15:24:37.000Z",
+      "title": "Why does Google prepend while(1); to their JSON responses?",
+      "url": "http://stackoverflow.com/q/2669690/1922352",
+      "author": "vikas0380",
+      "points": 598,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 110,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1494084277,
+      "relevancy_score": 7406,
+      "_tags": ["story", "author_vikas0380", "story_14280625"],
+      "objectID": "14280625",
+      "_highlightResult": {
+        "title": {
+          "value": "Why does Google prepend while(1); to their <em>JSON</em> responses?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://stackoverflow.com/q/2669690/1922352",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "vikas0380",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2022-08-28T09:03:51.000Z",
+      "title": "JSON Crack – Visualize JSON data into graphs",
+      "url": "https://jsoncrack.com",
+      "author": "iCutMoon",
+      "points": 576,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 96,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1661677431,
+      "_tags": ["story", "author_iCutMoon", "story_32626873"],
+      "objectID": "32626873",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> Crack – Visualize <em>JSON</em> data into graphs",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://<em>json</em>crack.com",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "iCutMoon",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2023-03-26T16:59:36.000Z",
+      "title": "Show HN: Apple Notes Liberator – Extract Notes.app Data and Save It as JSON",
+      "url": "https://github.com/HamburgChimps/apple-notes-liberator",
+      "author": "kello",
+      "points": 563,
+      "story_text": "Hey there!<p>I just released the first version of a project I’ve been working on solves a very specific problem that perhaps only I have. I welcome any and all feedback, even if you just want to drop in to say that this is a hot piece of garbage!",
+      "comment_text": null,
+      "num_comments": 105,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1679849976,
+      "_tags": ["story", "author_kello", "story_35316679", "show_hn"],
+      "objectID": "35316679",
+      "_highlightResult": {
+        "title": {
+          "value": "Show HN: Apple Notes Liberator – Extract Notes.app Data and Save It as <em>JSON</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/HamburgChimps/apple-notes-liberator",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "kello",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "Hey there!<p>I just released the first version of a project I’ve been working on solves a very specific problem that perhaps only I have. I welcome any and all feedback, even if you just want to drop in to say that this is a hot piece of garbage!",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2016-10-26T14:11:51.000Z",
+      "title": "Parsing JSON is a Minefield",
+      "url": "http://seriot.ch/parsing_json.php",
+      "author": "beefburger",
+      "points": 559,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 292,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1477491111,
+      "relevancy_score": 7044,
+      "_tags": ["story", "author_beefburger", "story_12796556"],
+      "objectID": "12796556",
+      "_highlightResult": {
+        "title": {
+          "value": "Parsing <em>JSON</em> is a Minefield",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://seriot.ch/parsing_<em>json</em>.php",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "beefburger",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-09-18T14:22:07.000Z",
+      "title": "The cost of parsing JSON",
+      "url": "https://v8.dev/blog/cost-of-javascript-2019#json",
+      "author": "s9w",
+      "points": 543,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 293,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1568816527,
+      "_tags": ["story", "author_s9w", "story_21005704"],
+      "objectID": "21005704",
+      "_highlightResult": {
+        "title": {
+          "value": "The cost of parsing <em>JSON</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://v8.dev/blog/cost-of-javascript-2019#<em>json</em>",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "s9w",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2022-01-20T16:51:18.000Z",
+      "title": "The time might come when we add some JSON specific command line options",
+      "url": "https://curl.se/mail/archive-2022-01/0043.html",
+      "author": "dennis-tra",
+      "points": 536,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 150,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1642697478,
+      "_tags": ["story", "author_dennis-tra", "story_30011382"],
+      "objectID": "30011382",
+      "_highlightResult": {
+        "title": {
+          "value": "The time might come when we add some <em>JSON</em> specific command line options",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://curl.se/mail/archive-2022-01/0043.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "dennis-tra",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-08-06T09:53:11.000Z",
+      "title": "Simdjson: Parsing gigabytes of JSON per second",
+      "url": "https://github.com/simdjson/simdjson",
+      "author": "lorenzfx",
+      "points": 503,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 151,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1596707591,
+      "_tags": ["story", "author_lorenzfx", "story_24069530"],
+      "objectID": "24069530",
+      "_highlightResult": {
+        "title": {
+          "value": "Simdjson: Parsing gigabytes of <em>JSON</em> per second",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/simdjson/simdjson",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "lorenzfx",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2022-11-29T03:53:12.000Z",
+      "title": "JSON Hero: Enhanced JSON structure visualization",
+      "url": "https://jsonhero.io/",
+      "author": "fagnerbrack",
+      "points": 499,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 195,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1669693992,
+      "_tags": ["story", "author_fagnerbrack", "story_33783504"],
+      "objectID": "33783504",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> Hero: Enhanced <em>JSON</em> structure visualization",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://<em>json</em>hero.io/",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "fagnerbrack",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-07-07T01:02:45.000Z",
+      "title": "JSON Resume – a JSON-based open source standard for resumes",
+      "url": "http://jsonresume.org/",
+      "author": "krrishd",
+      "points": 489,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 210,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1404694965,
+      "relevancy_score": 5431,
+      "_tags": ["story", "author_krrishd", "story_7996464"],
+      "objectID": "7996464",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> Resume – a <em>JSON</em>-based open source standard for resumes",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://<em>json</em>resume.org/",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "krrishd",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-05-17T17:34:32.000Z",
+      "title": "JSON Feed",
+      "url": "https://jsonfeed.org/2017/05/17/announcing_json_feed",
+      "author": "fold",
+      "points": 486,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 215,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1495042472,
+      "relevancy_score": 7433,
+      "_tags": ["story", "author_fold", "story_14360729"],
+      "objectID": "14360729",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> Feed",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://<em>json</em>feed.org/2017/05/17/announcing_<em>json</em>_feed",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "fold",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-03-01T03:59:49.000Z",
+      "title": "JSON with Sqlite",
+      "url": "https://www.sqlite.org/json1.html",
+      "author": "ausjke",
+      "points": 473,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 68,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1551412789,
+      "relevancy_score": 8683,
+      "_tags": ["story", "author_ausjke", "story_19277809"],
+      "objectID": "19277809",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> with Sqlite",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://www.sqlite.org/<em>json</em>1.html",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "ausjke",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-09-08T01:05:19.000Z",
+      "title": "JSON Web Tokens",
+      "url": "http://jwt.io/?",
+      "author": "adamnemecek",
+      "points": 467,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 74,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1410138319,
+      "relevancy_score": 5552,
+      "_tags": ["story", "author_adamnemecek", "story_8283006"],
+      "objectID": "8283006",
+      "_highlightResult": {
+        "title": {
+          "value": "<em>JSON</em> Web Tokens",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://jwt.io/?",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "adamnemecek",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2015-04-27T15:41:10.000Z",
+      "title": "Jq – A Command-line JSON processor",
+      "url": "http://stedolan.github.io/jq/",
+      "author": "geekrax",
+      "points": 451,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 91,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1430149270,
+      "relevancy_score": 5995,
+      "_tags": ["story", "author_geekrax", "story_9446980"],
+      "objectID": "9446980",
+      "_highlightResult": {
+        "title": {
+          "value": "Jq – A Command-line <em>JSON</em> processor",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://stedolan.github.io/jq/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "geekrax",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2022-11-03T07:55:40.000Z",
+      "title": "JC – JSONifies the output of many CLI tools",
+      "url": "https://kellyjonbrazil.github.io/jc/",
+      "author": "pgl",
+      "points": 411,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 132,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1667462140,
+      "_tags": ["story", "author_pgl", "story_33448204"],
+      "objectID": "33448204",
+      "_highlightResult": {
+        "title": {
+          "value": "JC – <em>JSON</em>ifies the output of many CLI tools",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://kellyjonbrazil.github.io/jc/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "pgl",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2018-02-05T15:54:38.000Z",
+      "title": "Automerge: JSON-like data structure for building collaborative apps",
+      "url": "https://github.com/automerge/automerge",
+      "author": "goblin89",
+      "points": 409,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 98,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1517846078,
+      "relevancy_score": 7944,
+      "_tags": ["story", "author_goblin89", "story_16309533"],
+      "objectID": "16309533",
+      "_highlightResult": {
+        "title": {
+          "value": "Automerge: <em>JSON</em>-like data structure for building collaborative apps",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "https://github.com/automerge/automerge",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "goblin89",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2013-02-04T23:58:49.000Z",
+      "title": "Why does Google append while(1); in front of their JSON responses?",
+      "url": "http://stackoverflow.com/questions/2669690/why-does-google-append-while1-in-front-of-their-json-responses",
+      "author": "i386",
+      "points": 409,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 58,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1360022329,
+      "relevancy_score": 4436,
+      "_tags": ["story", "author_i386", "story_5168121"],
+      "objectID": "5168121",
+      "_highlightResult": {
+        "title": {
+          "value": "Why does Google append while(1); in front of their <em>JSON</em> responses?",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "url": {
+          "value": "http://stackoverflow.com/questions/2669690/why-does-google-append-while1-in-front-of-their-<em>json</em>-responses",
+          "matchLevel": "full",
+          "fullyHighlighted": false,
+          "matchedWords": ["json"]
+        },
+        "author": {
+          "value": "i386",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    }
+  ],
+  "nbHits": 75905,
+  "page": 0,
+  "nbPages": 50,
+  "hitsPerPage": 20,
+  "exhaustiveNbHits": false,
+  "exhaustiveTypo": false,
+  "exhaustive": {
+    "nbHits": false,
+    "typo": false
+  },
+  "query": "json",
+  "params": "advancedSyntax=true&analytics=true&analyticsTags=backend&query=json",
+  "processingTimeMS": 14,
+  "processingTimingsMS": {
+    "fetch": {
+      "scanning": 11,
+      "total": 13
+    },
+    "request": {
+      "roundTrip": 15
+    },
+    "total": 14
+  },
+  "serverTimeMS": 15
+}

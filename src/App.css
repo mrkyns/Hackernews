@@ -108,7 +108,7 @@ nav ul li a:hover {
 .search_wrapper {
   height: 45px;
   border-radius: 10px;
-  background-color: #00000029
+  background-color: #00000029;
 }
 
 .search_input {
@@ -117,7 +117,7 @@ nav ul li a:hover {
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: #00000029
+  background-color: #00000029;
 }
 
 .search_input::placeholder {
@@ -132,11 +132,60 @@ nav ul li a:hover {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #00000029;
-  border-left: 5px solid #FF6600;
+  border-left: 5px solid #ff6600;
 }
 /* ==============================
             Article
 ============================== */
+
+.Article__wrapper {
+  background-color: var(--article_bg);
+  margin: 1rem 2rem;
+  border-radius: 1.5rem;
+  padding-left: 1rem;
+}
+
+.Article {
+  padding: 0.75rem 0rem;
+  margin: 0.25rem 3rem;
+}
+
+.Article::marker {
+  content: counter(list-item) ". \25B2";
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  font-weight: 800;
+}
+
+.Article a {
+  text-decoration: none;
+  /* color: inherit; */
+  display: inline-block;
+  margin: 0rem 0.5rem;
+}
+
+.Article__title {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.Article__source {
+  color: inherit;
+}
+
+.Article__source:hover {
+  color: var(--accent_light);
+}
+
+.Article p {
+  margin-left: 0.5rem;
+}
+
+.Article__hide:hover {
+  color: var(--accent_light);
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 /* ==============================
             Pagination

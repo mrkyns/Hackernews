@@ -1,10 +1,15 @@
 import Search from "./Search";
 import Article from "./Article";
 import Pagination from "./Pagination";
-import someDummyData from "./dummy.json";
+// import someDummyData from "./dummy.json";
+import someDummyData from "./dummy_long.json";
 
 export default function Body() {
-  const arrayWeGetFromAPI = [...someDummyData];
+  const arrayWeGetFromAPI = [...someDummyData.hits];
+  // console.log(
+  //   window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  // );
   return (
     <div className="Body">
       <Search />
