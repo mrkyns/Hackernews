@@ -2,15 +2,16 @@ import Search from "./Search";
 import Article from "./Article";
 import Pagination from "./Pagination";
 // import someDummyData from "./dummy.json";
-import someDummyData from "./dummy_long.json";
+// import someDummyData from "./dummy_long.json";
 
-export default function Body() {
-  const arrayWeGetFromAPI = [...someDummyData.hits];
+export default function Body({ fetchedData = [], setQuery }) {
+  // const fetchedData = [...someDummyData.hits];
+  console.log(fetchedData);
   return (
     <div className="Body">
       <Search />
       <ol>
-        {arrayWeGetFromAPI.map((item) => (
+        {fetchedData.map((item) => (
           <Article
             title={item.title}
             url={item.url}

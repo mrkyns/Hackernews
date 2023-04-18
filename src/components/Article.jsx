@@ -24,7 +24,7 @@ export default function Article({
     const item = target.closest(".Article");
     item.style.display = "none";
   };
-  const urlText = url.split("/")[2];
+  const urlText = url?.split("/")[2];
 
   return (
     <div className="Article__wrapper">
@@ -32,8 +32,13 @@ export default function Article({
         <button className="Article__btn-up" onClick={increasePoints}>
           &#9650;
         </button>
-        <a href={url} className="Article__title">
-          <h3>{title}</h3>
+        <a
+          href={url}
+          className="Article__title"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h3>{title ? title : "Article is removed :("}</h3>
         </a>
         <a
           className="Article__source"
@@ -41,7 +46,7 @@ export default function Article({
           target="_blank"
           rel="noreferrer"
         >
-          ({urlText})
+          ({urlText ? urlText : "nowhere"})
         </a>
         <p>
           <span>{displayedPoints}</span> points | by <span>{author}</span> |{" "}
