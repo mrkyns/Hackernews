@@ -1,5 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  min-height: 100vh;
+  --background: #d9d9d9;
+  --text: #000;
+  --text_light: #fff;
+  --accent: #ff6600;
+  --accent_light: #fab485;
+  --article_bg: rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* ==============================
+              Body
+============================== */
+
+.Body {
+  background: var(--background);
+}
+
+/* ==============================
+            Header
+============================== */
+
+.Header {
+  background: var(--accent);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigation svg {
+  width: 40px;
+  fill: var(--text_light);
+}
+
+nav span {
+  color: var(--text_light);
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 1em;
+}
+
+nav ul li {
+  padding: 0 10px;
+  border-right: 2px solid var(--text_light);
+}
+
+nav ul li:last-child {
+  padding: 0 10px;
+  border: 0;
+}
+
+nav ul li a {
+  color: var(--text_light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent_light);
+}
+
+.login a {
+  color: var(--text_light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login a:hover {
+  color: var(--accent_light);
+}
+
+/* ==============================
+            Search
+============================== */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_wrapper {
+  height: 45px;
+  border-radius: 10px;
+  background-color: #00000029
+}
+
+.search_input {
+  width: 650px;
+  min-height: -webkit-fill-available;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #00000029
+}
+
+.search_input::placeholder {
+  color: black;
+  text-indent: 15px;
+}
+
+.search_button {
+  width: 110px;
+  border: none;
+  min-height: -webkit-fill-available;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #00000029;
+  border-left: 5px solid #FF6600;
+}
+/* ==============================
+            Article
+============================== */
+
+/* ==============================
+            Pagination
+============================== */
+
+/* ==============================
+            Footer
+============================== */
