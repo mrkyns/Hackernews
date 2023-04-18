@@ -6,10 +6,6 @@ import someDummyData from "./dummy_long.json";
 
 export default function Body() {
   const arrayWeGetFromAPI = [...someDummyData.hits];
-  // console.log(
-  //   window.matchMedia &&
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches
-  // );
   return (
     <div className="Body">
       <Search />
@@ -20,7 +16,7 @@ export default function Body() {
             url={item.url}
             points={item.points}
             author={item.author}
-            time={item.created_at_i}
+            time={item.created_at}
             visibility={true}
             comments={item.num_comments}
             id={item.objectID}

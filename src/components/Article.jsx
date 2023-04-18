@@ -1,4 +1,5 @@
-// import "./Article.css";
+import { useState } from "react";
+import ReactTimeAgo from "react-time-ago";
 
 export default function Article({
   title,
@@ -10,6 +11,15 @@ export default function Article({
   comments,
   id,
 }) {
+  const [displayedPoints, setDisplayedPoints] = useState(points);
+  const [arePointsIncreased, setArePointsIncreased] = useState(false);
+
+  const increasePoints = () => {
+    if (arePointsIncreased) return;
+    setArePointsIncreased(true);
+    setDisplayedPoints((prev) => prev + 1);
+  };
+
   const hide = ({ target }) => {
     const item = target.closest(".Article");
     item.style.display = "none";
@@ -19,6 +29,9 @@ export default function Article({
   return (
     <div className="Article__wrapper">
       <li className="Article" key={id}>
+        <button className="Article__btn-up" onClick={increasePoints}>
+          &#9650;
+        </button>
         <a href={url} className="Article__title">
           <h3>{title}</h3>
         </a>
@@ -31,8 +44,8 @@ export default function Article({
           ({urlText})
         </a>
         <p>
-          <span>{points}</span> points | by <span>{author}</span> |{" "}
-          <span>{time}</span> |{" "}
+          <span>{displayedPoints}</span> points | by <span>{author}</span> |{" "}
+          <ReactTimeAgo date={time} /> |{" "}
           <span className="Article__hide" onClick={hide}>
             {visibility ? `hide` : null}
           </span>{" "}
