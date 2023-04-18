@@ -168,26 +168,34 @@ nav ul li a:hover {
   background-color: var(--article_bg);
   margin: 1rem 2rem;
   border-radius: 1.5rem;
-  padding-left: 1rem;
 }
 
 .Article {
   padding: 0.75rem 0rem;
   margin: 0.25rem 3rem;
+  position: relative;
 }
 
 .Article::marker {
-  content: counter(list-item) ". \25B2";
-  font-size: 1.25rem;
-  padding-left: 1rem;
+  font-size: 1.5rem;
   font-weight: 900;
+}
+
+.Article__btn-up {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.Article__btn-up:hover {
+  color: var(--background);
 }
 
 .Article a {
   text-decoration: none;
-  /* color: inherit; */
   display: inline-block;
   margin: 0rem 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .Article__title {
@@ -197,20 +205,25 @@ nav ul li a:hover {
 
 .Article__source {
   color: inherit;
+  transition: all 0.3s ease;
 }
 
 .Article__source:hover {
-  color: var(--accent_light);
+  color: var(--background);
 }
 
 .Article p {
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.Article__hide {
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .Article__hide:hover {
-  color: var(--accent_light);
+  color: var(--background);
   text-decoration: underline;
-  cursor: pointer;
 }
 
 /* ==============================
