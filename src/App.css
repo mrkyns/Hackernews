@@ -232,27 +232,58 @@ nav ul li a:hover {
   background-color: var(--article_bg);
   margin: 1rem 2rem;
   border-radius: 1.5rem;
-}
-
-.Article {
-  padding: 0.75rem 0rem;
-  margin: 0.25rem 3rem;
   position: relative;
 }
 
-.Article::marker {
-  font-size: 1.5rem;
+.Article {
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 3.5rem;
+  position: relative;
+  list-style: none;
+}
+
+.Article::before {
+  content: counter(list-item) ".";
+  font-size: 2rem;
   font-weight: 900;
+  position: absolute;
+  inset: 1rem auto 1rem -2rem;
 }
 
 .Article__btn-up {
-  background-color: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--accent_light);
   border: none;
+  border-left: 3px solid var(--accent);
   cursor: pointer;
+  transition: all 0.3s ease;
+  width: 5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   transition: all 0.3s ease;
 }
 .Article__btn-up:hover {
   color: var(--background);
+}
+
+.Article__btn-svg {
+  stroke: var(--accent);
+  stroke-width: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.Article__btn-animation {
+  /* transform: scale(1.1) translate(-3px, -3px) rotate(-5deg); */
+  animation: like_animation 0.5s ease-out;
+}
+
+@keyframes like_animation {
+  66% {
+    transform: scale(1.1) translate(-3px, -3px) rotate(-5deg);
+  }
 }
 
 .Article a {
@@ -278,7 +309,7 @@ nav ul li a:hover {
 }
 
 .Article p {
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
   color: var(--text);
 }
 

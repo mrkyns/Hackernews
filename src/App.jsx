@@ -7,7 +7,7 @@ import Reagan from "./components/Reagan";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
-  const [query, setQuery] = useState("react");
+  const [query, setQuery] = useState("");
 
   const fetchData = async function (queryWord) {
     try {
