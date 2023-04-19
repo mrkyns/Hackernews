@@ -17,7 +17,7 @@ function App() {
       const data = await res.json();
       setFetchedData(data.hits);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
     }
   };
 

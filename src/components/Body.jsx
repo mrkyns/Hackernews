@@ -8,7 +8,7 @@ export default function Body({ fetchedData = [], setFetchedData, setQuery }) {
   // const fetchedData = [...someDummyData.hits];
   return (
     <div className="Body">
-      <Search />
+      <Search  fetchedData={fetchedData} setQuery={setQuery}/>
       <ol>
         {fetchedData.map((item) => (
           <Article
