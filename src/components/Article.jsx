@@ -9,7 +9,8 @@ export default function Article({
   time,
   visibility,
   comments,
-  key,
+  id,
+  setFetchedData,
 }) {
   const [displayedPoints, setDisplayedPoints] = useState(points);
   const [arePointsIncreased, setArePointsIncreased] = useState(false);
@@ -32,15 +33,17 @@ export default function Article({
     }
   };
 
-  const hide = ({ target }) => {
-    const item = target.closest(".Article");
-    item.style.display = "none";
+  const hide = () => {
+    setFetchedData((prev) => {
+      return prev.filter((item) => +item.objectID !== +id);
+    });
   };
+
   const urlText = url?.split("/")[2];
 
   return (
-    <div className="Article__wrapper" key={key}>
-      <li className="Article">
+    <li className="Article__wrapper">
+      <div className="Article">
         <a
           href={url}
           className="Article__title"
@@ -65,7 +68,7 @@ export default function Article({
           </span>{" "}
           | <span>{comments}</span> Comments
         </p>
-      </li>
+      </div>
       <button className="Article__btn-up" onClick={increasePoints}>
         <svg
           className="Article__btn-svg"
@@ -81,6 +84,6 @@ export default function Article({
           />
         </svg>
       </button>
-    </div>
+    </li>
   );
 }
