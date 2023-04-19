@@ -10,7 +10,7 @@ export default function Article({
   visibility,
   comments,
   id,
-  setFetchedData,
+  setHits,
 }) {
   const [displayedPoints, setDisplayedPoints] = useState(points);
   const [arePointsIncreased, setArePointsIncreased] = useState(false);
@@ -34,7 +34,7 @@ export default function Article({
   };
 
   const hide = () => {
-    setFetchedData((prev) => {
+    setHits((prev) => {
       return prev.filter((item) => +item.objectID !== +id);
     });
   };
