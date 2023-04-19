@@ -6,7 +6,6 @@ import Pagination from "./Pagination";
 
 export default function Body({ fetchedData = [], setQuery }) {
   // const fetchedData = [...someDummyData.hits];
-  console.log(fetchedData);
   return (
     <div className="Body">
       <Search />
@@ -20,7 +19,7 @@ export default function Body({ fetchedData = [], setQuery }) {
             time={item.created_at}
             visibility={true}
             comments={item.num_comments}
-            id={item.objectID}
+            kex={item.objectID}
           />
         ))}
       </ol>

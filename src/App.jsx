@@ -6,7 +6,7 @@ import Header from "./components/Header";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
-  const [query, setQuery] = useState("react");
+  const [query, setQuery] = useState("");
 
   const fetchData = async function (queryWord) {
     try {
