@@ -8,12 +8,17 @@
 
 body {
   min-height: 100vh;
+  background: var(--background_body);
+  --background_body: #fff;
   --background: #d9d9d9;
+  --accent_reagan: #0d3153;
   --text: #000;
   --text_light: #fff;
   --accent: #ff6600;
   --accent_light: #fab485;
+  --accent_border: #ff6600;
   --article_bg: rgba(0, 0, 0, 0.2);
+  --shadow: rgba(0, 0, 0, 0.2);
   font-family: "Poppins", sans-serif;
 }
 
@@ -28,6 +33,62 @@ body {
 
 .Body {
   background: var(--background);
+}
+
+/* ==============================
+          Reagan mode
+============================== */
+
+.reagan_mod {
+  min-height: 100vh;
+  --background: #091825;
+  --background_body: #222222;
+  --accent_reagan: #ff6600;
+  --text: #6b6b6b;
+  --text_light: #fff;
+  --accent: #0d3153;
+  --accent_light: #2e4e6b;
+  --accent_border: #0d3153;
+  --article_bg: rgba(0, 0, 0, 0.2);
+  --shadow: rgba(255, 255, 255, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.Reagan {
+  width: 190px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding: 3px 15px;
+  top: 20vh;
+  background: var(--background);
+  border-radius: 10px 10px 0 0;
+  transform: rotate(-90deg);
+  box-shadow: 2px 2px 10px var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+  font-weight: 700;
+  color: var(--text);
+}
+
+@keyframes slidein {
+  from {
+    right: -120px;
+  }
+
+  to {
+    right: -82px;
+  }
+}
+
+.Reagan:hover {
+  background: var(--accent_reagan);
+  color: var(--text_light);
 }
 
 /* ==============================
@@ -109,7 +170,6 @@ nav ul li a:hover {
 .search_wrapper {
   height: 45px;
   border-radius: 10px;
-  background-color: #00000029;
 }
 
 .search_input {
@@ -118,6 +178,7 @@ nav ul li a:hover {
   border: none;
   border-radius: 10px 0 0 10px;
   background-color: var(--article_bg);
+  color: var(--text);
 }
 
 @media (max-width: 800px) {
@@ -142,7 +203,7 @@ nav ul li a:hover {
 }
 
 .search_input::placeholder {
-  color: black;
+  color: var(--text);
   text-indent: 15px;
 }
 
@@ -152,13 +213,16 @@ nav ul li a:hover {
   min-height: -webkit-fill-available;
   border-radius: 0 10px 10px 0;
   background: var(--article_bg);
-  border-left: 2px solid #ff6600;
+  border-left: 2px solid var(--accent_border);
+  color: var(--text);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .search_button:hover {
   background: var(--accent_light);
+  border-left: 2px solid var(--text_light);
+  color: var(--text_light);
 }
 /* ==============================
             Article
@@ -196,9 +260,10 @@ nav ul li a:hover {
   display: inline-block;
   margin: 0rem 0.5rem;
   transition: all 0.3s ease;
+  color: var(--text);
 }
 
-.Article__title {
+.Article a h3 {
   color: var(--accent);
   font-weight: 700;
 }
@@ -209,11 +274,12 @@ nav ul li a:hover {
 }
 
 .Article__source:hover {
-  color: var(--background);
+  color: var(--accent);
 }
 
 .Article p {
   margin-left: 1.5rem;
+  color: var(--text);
 }
 
 .Article__hide {
@@ -222,7 +288,7 @@ nav ul li a:hover {
 }
 
 .Article__hide:hover {
-  color: var(--background);
+  color: var(--accent);
   text-decoration: underline;
 }
 
