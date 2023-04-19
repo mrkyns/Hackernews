@@ -181,6 +181,7 @@ nav ul li a:hover {
   background-color: var(--article_bg);
   color: var(--text);
   text-indent: 15px;
+  outline:none;
 }
 
 @media (max-width: 800px) {

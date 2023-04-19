@@ -1,36 +1,23 @@
-export default function Search( {fetchedData, setQuery} ) {
+import { useState } from "react";
 
-  let titles = fetchedData.map((item) =>item.title)
-  // console.log(titles)
-  // console.log(fetchedData)
+export default function Search( {fetchedData, setFetchedData, setQuery} ) {
 
-  const searchBtn = document.querySelector("search_button")
-  const searchBar = document.querySelector("search_input")
-
-//inputWord = what we are searching for//
-
-  function startQuery(inputWord) { 
-    let searchedTitles = []
-    titles.filter((title) => {
-      if (title.includes(inputWord)) {
-        return title && searchedTitles.push(title)
-      }
-      console.log(searchedTitles.length)
-    })
+  const [inputText, setInputText] = useState("");
+  
+  let inputHandler = (e) => {
+    e.preventDefault();
+    let lowerCase = e.target.value.toLowerCase();
+    console.log(lowerCase);
+    setInputText(lowerCase);
+    setQuery(inputText)
   };
-console.log(startQuery("France"))
 
-  //   searchBtn.addEventListener("click", () => {
-      
-  // })
-  // searchBar.addEventListener("submit",() =>{
-  //   let inputWord = 
-  // } )
+  
 
   return (
     <div className="Search">
       {/* <div className="search_wrapper"> */}
-        <form className="search_wrapper" method="get" action={fetchedData}>
+        <form className="search_wrapper" onChange={inputHandler}>
           <input
             className="search_input"
             type="search"
