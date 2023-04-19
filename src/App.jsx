@@ -19,7 +19,7 @@ function App() {
       const data = await res.json();
       setFetchedData(data);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
     }
   };
 

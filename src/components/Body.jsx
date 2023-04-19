@@ -21,7 +21,7 @@ export default function Body({
 
   return (
     <div className="Body">
-      <Search />
+      <Search  fetchedData={fetchedData} setQuery={setQuery}/>
       <ol>
         {hits.map((item) => (
           <Article
