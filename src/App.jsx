@@ -3,6 +3,7 @@ import "./App.css";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Reagan from "./components/Reagan";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
@@ -29,6 +30,7 @@ function App() {
       <Header />
       <Body fetchedData={fetchedData.hits} setQuery={setQuery} />
       <Footer />
+      <Reagan />
     </div>
   );
 }
