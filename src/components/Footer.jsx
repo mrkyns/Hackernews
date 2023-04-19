@@ -1,8 +1,10 @@
 export default function Footer() {
     return (
         <div className="Footer">
-          <div className="Footer-content">
+          <div className="Footer-hd">
             <h3>Applications are open for YC Summer 2023</h3>
+          </div>
+          <div className="Footer-list">
             <ul>
                 <li>Guidelines |</li>
                 <li> FAQ |</li>

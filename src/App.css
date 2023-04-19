@@ -338,3 +338,39 @@ nav ul li a:hover {
 /* ==============================
             Footer
 ============================== */
+
+.Footer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--accent_light);
+}
+
+.Footer-hd{
+  margin-left: 3em;
+}
+
+
+.Footer-hd h3 {
+  margin-top: 2rem;
+  color: var(--text_light);
+}
+
+.Footer-list{
+  margin-bottom: 0.2em;
+}
+
+.Footer-list ul  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  color:var(--text) ;
+  margin-bottom: 9px;
+}
+
+.Footer-list ul > li {
+  margin: 0 0.12rem 0.3rem 0.3rem;
+  font-size: 13px;  
+}
