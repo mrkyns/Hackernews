@@ -233,13 +233,13 @@ nav ul li a:hover {
   margin: 1rem 2rem;
   border-radius: 1.5rem;
   position: relative;
+  list-style: none;
 }
 
 .Article {
   padding: 0.75rem 1rem;
   margin: 0.25rem 3.5rem;
   position: relative;
-  list-style: none;
 }
 
 .Article::before {
@@ -248,6 +248,7 @@ nav ul li a:hover {
   font-weight: 900;
   position: absolute;
   inset: 1rem auto 1rem -2rem;
+  color: var(--text);
 }
 
 .Article__btn-up {
