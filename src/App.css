@@ -169,7 +169,6 @@ nav ul li a:hover {
 .search_wrapper {
   height: 45px;
   border-radius: 10px;
-  background-color: #d9d9d9;
 }
 
 .search_input {
@@ -356,15 +355,13 @@ nav ul li a:hover {
   flex-direction: column;
 }
 
-#root > div > div.Body > div.pagination > ul {
+.pagination ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
   list-style: none;
   flex-direction: row;
-  cursor: pointer;
-
   width: fit-content;
   min-height: 15px;
   border: none;
@@ -372,8 +369,57 @@ nav ul li a:hover {
   background-color: var(--article_bg);
   color: var(--text);
   outline: none;
-  margin: 40px;
+  margin: 10px 0;
+}
+
+.pagination ul li {
+  cursor: pointer;
+  min-width: 40px;
   padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li:hover {
+  background: var(--accent_light);
+  border-radius: 10px;
+  color: var(--text_light);
+  padding: 9px;
+}
+
+.pagination ul li:first-child {
+  border-right: 2px solid var(--accent_border);
+  transition: all 0.3s ease;
+}
+
+.pagination ul li:first-child:hover {
+  background: var(--accent_light);
+  border-right: 2px solid var(--text_light);
+  color: var(--text_light);
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.pagination ul li:last-child {
+  border-left: 2px solid var(--accent_border);
+  transition: all 0.3s ease;
+}
+
+.pagination ul li:last-child:hover {
+  background: var(--accent_light);
+  border-left: 2px solid var(--text_light);
+  color: var(--text_light);
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+}
+
+.break {
+  background: none;
+}
+
+.break:hover {
+  background: transparent;
+  color: var(--text);
 }
 
 /* ==============================
@@ -407,7 +453,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  color: var(--text);
+  color: #000;
   margin-bottom: 9px;
 }
 
@@ -417,7 +463,7 @@ nav ul li a:hover {
 }
 
 .Footer-list ul li a {
-  color: var(--text);
+  color: #000;
   text-decoration: none;
   transition: all 0.3s ease;
 }
