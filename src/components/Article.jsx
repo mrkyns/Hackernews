@@ -40,7 +40,7 @@ export default function Article({
     });
   };
 
-  const slicedTitle = title.length > 60 ? `${title.slice(0, 60)} ...` : title;
+  const slicedTitle = title?.length > 60 ? `${title.slice(0, 60)} ...` : title;
 
   const urlText = url?.split("/")[2];
 
