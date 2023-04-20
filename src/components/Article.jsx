@@ -8,7 +8,6 @@ export default function Article({
   points,
   author,
   time,
-  visibility,
   comments,
   id,
   setHits,
@@ -22,13 +21,11 @@ export default function Article({
     if (!arePointsIncreased) {
       setArePointsIncreased(true);
       setDisplayedPoints((prev) => prev + 1);
-      button.children[0].style.fill = "var(--accent)";
       button.children[0].style.stroke = "none";
       button.children[0].classList.add("Article__btn-animation");
     } else {
       setArePointsIncreased(false);
       setDisplayedPoints((prev) => prev - 1);
-      button.children[0].style.fill = "none";
       button.children[0].style.stroke = "var(--accent)";
       button.children[0].classList.remove("Article__btn-animation");
     }
@@ -54,7 +51,7 @@ export default function Article({
           target="_blank"
           rel="noreferrer"
         >
-          <h3>{title ? slicedTitle : "Article is removed :("}</h3>
+          <h3>{title ? slicedTitle : "Article has been removed :("}</h3>
         </a>
         <a
           className="Article__source"
@@ -68,7 +65,7 @@ export default function Article({
           <span>{displayedPoints}</span> points | by <span>{author}</span> |{" "}
           <ReactTimeAgo date={time} /> |{" "}
           <span className="Article__hide" onClick={hide}>
-            {visibility ? `hide` : null}
+            hide
           </span>{" "}
           | <span>{comments}</span> Comments
         </p>

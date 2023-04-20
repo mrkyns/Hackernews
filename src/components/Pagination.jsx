@@ -17,15 +17,7 @@ function Items({ currentItems }) {
   );
 }
 
-export default function Pagination({
-  itemsPerPage,
-  fetchedData,
-  setFetchedData,
-  hits,
-  setHitsPerPage,
-  setPageNum,
-  setHits,
-}) {
+export default function Pagination({ itemsPerPage, hits, setHits }) {
   const items = hits;
 
   function Items({ currentItems }) {
@@ -42,7 +34,7 @@ export default function Pagination({
   }
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(1);
+  const [itemOffset, setItemOffset] = useState(0);
 
   // Simulate fetching items from another resources.
   // (This could be items from props; or items loaded in a local state
@@ -73,7 +65,6 @@ export default function Pagination({
             points={item.points}
             author={item.author}
             time={Date.parse(item.created_at)}
-            visibility={true}
             comments={item.num_comments}
             key={item.objectID}
             id={item.objectID}
