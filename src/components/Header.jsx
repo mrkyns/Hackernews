@@ -21,25 +21,31 @@ export default function Header() {
           <span>Hacker News</span>
           <ul>
             <li>
-              <a href="#">new</a>
+              <a href="#">new</a> |
             </li>
             <li>
-              <a href="#">past</a>
+              {" "}
+              <a href="#">past</a> |
             </li>
             <li>
-              <a href="#">comments</a>
+              {" "}
+              <a href="#">comments</a> |
             </li>
             <li>
-              <a href="#">ask</a>
+              {" "}
+              <a href="#">ask</a> |
             </li>
             <li>
-              <a href="#">show</a>
+              {" "}
+              <a href="#">show</a> |
             </li>
             <li>
-              <a href="#">jobs</a>
+              {" "}
+              <a href="#">jobs</a> |
             </li>
             <li>
-              <a href="#">submit</a>
+              {" "}
+              <a href="#">submit</a> |
             </li>
           </ul>
         </nav>
