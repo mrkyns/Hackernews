@@ -297,7 +297,7 @@ nav ul li a:hover {
 }
 
 .Article__btn-animation {
-  /* transform: scale(1.1) translate(-3px, -3px) rotate(-5deg); */
+  fill: var(--accent);
   animation: like_animation 0.5s ease-out;
 }
 
