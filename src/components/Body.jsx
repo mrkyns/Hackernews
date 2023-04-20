@@ -1,16 +1,29 @@
 import Search from "./Search";
 import Article from "./Article";
 import Pagination from "./Pagination";
+import { useEffect, useState } from "react";
 // import someDummyData from "./dummy.json";
 // import someDummyData from "./dummy_long.json";
 
-export default function Body({ fetchedData = [], setFetchedData, setQuery }) {
+export default function Body({
+  fetchedData,
+  setFetchedData,
+  setQuery,
+  setHitsPerPage,
+  setPageNum,
+}) {
   // const fetchedData = [...someDummyData.hits];
+  const [hits, setHits] = useState([]);
+
+  useEffect(() => {
+    if (fetchedData.hits) setHits(fetchedData.hits);
+  }, [fetchedData]);
+
   return (
     <div className="Body">
       <Search  fetchedData={fetchedData} setQuery={setQuery}/>
       <ol>
-        {fetchedData.map((item) => (
+        {hits.map((item) => (
           <Article
             title={item.title}
             url={item.url}
@@ -21,8 +34,7 @@ export default function Body({ fetchedData = [], setFetchedData, setQuery }) {
             comments={item.num_comments}
             key={item.objectID}
             id={item.objectID}
-            setFetchedData={setFetchedData}
-            fetchedData={fetchedData}
+            setHits={setHits}
           />
         ))}
       </ol>
