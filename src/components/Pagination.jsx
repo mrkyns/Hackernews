@@ -1,28 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
-import Article from './Article';
+import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
+import Article from "./Article";
 
 const hits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 function Items({ currentItems }) {
-    return (
-      <>
-        {currentItems &&
-          currentItems.map((item) => (
-            <div>
-              <h3>Item #{item}</h3>
-            </div>
-          ))}
-      </>
-    );
-  }
+  return (
+    <>
+      {currentItems &&
+        currentItems.map((item) => (
+          <div>
+            <h3>Item #{item}</h3>
+          </div>
+        ))}
+    </>
+  );
+}
 
+export default function Pagination({
+  itemsPerPage,
+  fetchedData,
+  setFetchedData,
+  hits,
+  setHitsPerPage,
+  setPageNum,
+  setHits,
+}) {
+  const items = hits;
 
-export default function Pagination({ itemsPerPage, fetchedData, setFetchedData, hits, setHitsPerPage, setPageNum, setHits }) {
-
-    const items = hits
-
-function Items({ currentItems }) {
+  function Items({ currentItems }) {
     return (
       <>
         {currentItems &&
@@ -59,8 +65,9 @@ function Items({ currentItems }) {
     <>
       {/* <Items currentItems={currentItems} /> */}
       <ol>
-        {currentItems.map((item) => (
+        {currentItems.map((item, index) => (
           <Article
+            articleNum={+itemOffset + index + 1}
             title={item.title}
             url={item.url}
             points={item.points}
@@ -92,7 +99,5 @@ function Items({ currentItems }) {
 //   <PaginatedItems itemsPerPage={4} />,
 //   document.getElementById('container')
 // );
-
-
 
 // Example items, to simulate fetching from another resources.
