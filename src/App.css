@@ -346,6 +346,35 @@ nav ul li a:hover {
             Pagination
 ============================== */
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#root > div > div.Body > div.pagination > ul {
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    flex-direction: row;
+    cursor: pointer;
+
+    width: fit-content;
+  min-height: 15px;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  background-color: var(--article_bg);
+  color: var(--text);
+  outline:none;
+  margin: 40px;
+  padding: 10px;
+}
+
+
+
 /* ==============================
             Footer
 ============================== */

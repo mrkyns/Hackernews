@@ -4,11 +4,12 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Reagan from "./components/Reagan";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
   const [query, setQuery] = useState("");
-  const [hitsPerPage, setHitsPerPage] = useState(5);
+  const [hitsPerPage, setHitsPerPage] = useState(1000);
   const [pageNum, setPageNum] = useState(0);
 
   const fetchData = async function (queryWord, hitsPerPage, pageNum) {

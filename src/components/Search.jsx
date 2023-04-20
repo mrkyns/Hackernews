@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Search( {fetchedData, setFetchedData, setQuery} ) {
+export default function Search( { setQuery } ) {
 
   const [inputText, setInputText] = useState("");
   
@@ -29,5 +29,3 @@ export default function Search( {fetchedData, setFetchedData, setQuery} ) {
     </div>
   );
 }
-
-/* This is just for me for the future -  search rule - max 1 char deviance and max -1 string length*/
