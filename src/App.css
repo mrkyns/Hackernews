@@ -180,7 +180,7 @@ nav ul li a:hover {
   background-color: var(--article_bg);
   color: var(--text);
   text-indent: 15px;
-  outline:none;
+  outline: none;
 }
 
 @media (max-width: 800px) {
@@ -240,21 +240,24 @@ nav ul li a:hover {
   border-radius: 1.5rem;
   position: relative;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .Article {
-  padding: 0.75rem 1rem;
-  margin: 0.25rem 3.5rem;
-  position: relative;
+  padding: 0.75rem 0rem;
+  /* max-width: 1080px; */
+  min-width: 1000px;
+  display: inline-block;
 }
 
-.Article::before {
-  content: counter(list-item) ".";
+.Article__num {
+  display: inline-block;
   font-size: 2rem;
   font-weight: 900;
-  position: absolute;
-  inset: 1rem auto 1rem -2rem;
+  margin: 0 0.75rem 0 1rem;
   color: var(--text);
+  text-align: center;
 }
 
 .Article__btn-up {
@@ -355,25 +358,23 @@ nav ul li a:hover {
 
 #root > div > div.Body > div.pagination > ul {
   display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    list-style: none;
-    flex-direction: row;
-    cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  flex-direction: row;
+  cursor: pointer;
 
-    width: fit-content;
+  width: fit-content;
   min-height: 15px;
   border: none;
   border-radius: 10px 10px 10px 10px;
   background-color: var(--article_bg);
   color: var(--text);
-  outline:none;
+  outline: none;
   margin: 40px;
   padding: 10px;
 }
-
-
 
 /* ==============================
             Footer

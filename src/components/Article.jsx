@@ -3,6 +3,7 @@ import ReactTimeAgo from "react-time-ago";
 
 export default function Article({
   title,
+  articleNum,
   url,
   points,
   author,
@@ -39,10 +40,13 @@ export default function Article({
     });
   };
 
+  const slicedTitle = title.length > 60 ? `${title.slice(0, 60)} ...` : title;
+
   const urlText = url?.split("/")[2];
 
   return (
     <li className="Article__wrapper">
+      <span className="Article__num">{articleNum}.</span>
       <div className="Article">
         <a
           href={url}
@@ -50,7 +54,7 @@ export default function Article({
           target="_blank"
           rel="noreferrer"
         >
-          <h3>{title ? title : "Article is removed :("}</h3>
+          <h3>{title ? slicedTitle : "Article is removed :("}</h3>
         </a>
         <a
           className="Article__source"
