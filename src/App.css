@@ -363,7 +363,7 @@ nav ul li a:hover {
   list-style: none;
   flex-direction: row;
   width: fit-content;
-  min-height: 15px;
+  min-height: 41px;
   border: none;
   border-radius: 10px 10px 10px 10px;
   background-color: var(--article_bg);
@@ -372,27 +372,34 @@ nav ul li a:hover {
   margin: 10px 0;
 }
 
-.pagination ul li {
-  cursor: pointer;
-  min-width: 40px;
+.pagination ul li a {
   padding: 10px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
-.pagination ul li:hover {
+.pagination ul li a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 40px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li a:hover {
   background: var(--accent_light);
   border-radius: 10px;
   color: var(--text_light);
   padding: 9px;
 }
 
-.pagination ul li:first-child {
+.pagination ul li:first-child a {
   border-right: 2px solid var(--accent_border);
   transition: all 0.3s ease;
 }
 
-.pagination ul li:first-child:hover {
+.pagination ul li:first-child a:hover {
   background: var(--accent_light);
   border-right: 2px solid var(--text_light);
   color: var(--text_light);
@@ -400,12 +407,12 @@ nav ul li a:hover {
   border-radius: 10px 0 0 10px;
 }
 
-.pagination ul li:last-child {
+.pagination ul li:last-child a {
   border-left: 2px solid var(--accent_border);
   transition: all 0.3s ease;
 }
 
-.pagination ul li:last-child:hover {
+.pagination ul li:last-child a:hover {
   background: var(--accent_light);
   border-left: 2px solid var(--text_light);
   color: var(--text_light);
