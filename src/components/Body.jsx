@@ -22,23 +22,11 @@ export default function Body({
   return (
     <div className="Body">
       <Search  fetchedData={fetchedData} setQuery={setQuery}/>
-      <ol>
-        {hits.map((item) => (
-          <Article
-            title={item.title}
-            url={item.url}
-            points={item.points}
-            author={item.author}
-            time={Date.parse(item.created_at)}
-            visibility={true}
-            comments={item.num_comments}
-            key={item.objectID}
-            id={item.objectID}
-            setHits={setHits}
-          />
-        ))}
-      </ol>
-      <Pagination />
+      
+      <div className="pagination">
+      <Pagination setHits={setHits} fetchedData={fetchedData} setFetchedData={setFetchedData} itemsPerPage={20} hits={hits} setHitsPerPage={setHitsPerPage} setPageNum={setPageNum}  />
+      </div>
+
     </div>
   );
 }
