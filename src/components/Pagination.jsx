@@ -17,7 +17,7 @@ function Items({ currentItems }) {
   );
 }
 
-export default function Pagination({ itemsPerPage, hits, setHits }) {
+export default function Pagination({ itemsPerPage, hits, setHits, query }) {
   const items = hits;
 
   function Items({ currentItems }) {
@@ -69,6 +69,7 @@ export default function Pagination({ itemsPerPage, hits, setHits }) {
             key={item.objectID}
             id={item.objectID}
             setHits={setHits}
+            query={query}
           />
         ))}
       </ol>

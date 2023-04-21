@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactTimeAgo from "react-time-ago";
 
 export default function Article({
@@ -11,6 +11,7 @@ export default function Article({
   comments,
   id,
   setHits,
+  query,
 }) {
   const [displayedPoints, setDisplayedPoints] = useState(points);
   const [arePointsIncreased, setArePointsIncreased] = useState(false);
@@ -39,6 +40,31 @@ export default function Article({
 
   const slicedTitle = title?.length > 60 ? `${title.slice(0, 60)} ...` : title;
 
+  const uppercaseMap = slicedTitle?.split("").reduce((acc, val, ind) => {
+    acc[ind] = val === val.toUpperCase();
+    return acc;
+  }, {});
+
+  const partitionedByQueryWord = slicedTitle?.toLowerCase().split(query) || [
+    slicedTitle,
+  ];
+
+  const dummyDelimiter = "*".repeat(query.length);
+  const titleArr = partitionedByQueryWord
+    .join(dummyDelimiter)
+    .split("")
+    .map((char, ind) => {
+      if (uppercaseMap[ind]) return char.toUpperCase();
+      return char;
+    })
+    .join("")
+    .split(dummyDelimiter);
+
+  const originalQueryWord = slicedTitle?.slice(
+    titleArr[0].length,
+    titleArr[0].length + query.length
+  );
+
   const urlText = url?.split("/")[2];
 
   return (
@@ -51,7 +77,17 @@ export default function Article({
           target="_blank"
           rel="noreferrer"
         >
-          <h3>{title ? slicedTitle : "Article has been removed :("}</h3>
+          {!title && "Article has been removed :("}
+          <h3>
+            {titleArr.map((part, index) => (
+              <>
+                {part}
+                <span className="Article__highlight">
+                  {index !== titleArr.length - 1 ? originalQueryWord : null}
+                </span>
+              </>
+            ))}
+          </h3>
         </a>
         <a
           className="Article__source"
