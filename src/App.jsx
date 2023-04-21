@@ -42,6 +42,7 @@ function App() {
         setHitsPerPage={setHitsPerPage}
         setPageNum={setPageNum}
         loading={loading}
+        query={query}
       />
       <Footer />
       <Reagan />

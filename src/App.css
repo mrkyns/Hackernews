@@ -229,6 +229,37 @@ nav ul li a:hover {
   border-left: 2px solid var(--text_light);
   color: var(--text_light);
 }
+
+/* ==============================
+        No Search Result
+============================== */
+
+.NoResult {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.NoResult svg {
+  fill: var(--article_bg);
+  width: 150px;
+}
+
+.NoResult h2 {
+  color: var(--accent);
+  font-size: 45px;
+}
+
+.NoResult p {
+  color: var(--text);
+}
+
+.NoResult p span {
+  color: var(--accent);
+}
+
 /* ==============================
             Article
 ============================== */
