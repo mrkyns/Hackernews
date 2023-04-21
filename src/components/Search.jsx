@@ -8,7 +8,7 @@ export default function Search({ setQuery }) {
     let lowerCase = e.target.value.toLowerCase();
     // console.log(lowerCase);
     setInputText(lowerCase);
-    setQuery(inputText);
+    // setQuery(inputText);
   };
 
   let submitHandler = (e) => {

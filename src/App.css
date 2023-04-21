@@ -115,6 +115,7 @@ body {
 .navigation svg {
   width: 40px;
   fill: var(--text_light);
+  cursor: pointer;
 }
 
 nav span {
@@ -122,6 +123,7 @@ nav span {
   font-size: 1.2em;
   font-weight: 600;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 nav ul {
