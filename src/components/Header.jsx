@@ -1,8 +1,9 @@
-export default function Header() {
+export default function Header({ setIsLoadingFront, setSortBy }) {
   return (
     <div className="Header">
       <div className="navigation">
         <svg
+          onClick={() => setIsLoadingFront(true)}
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +19,13 @@ export default function Header() {
           </g>
         </svg>
         <nav>
-          <span>Hacker News</span>
+          <span onClick={() => setIsLoadingFront(true)}>Hacker News</span>
           <ul>
             <li>
-              <a href="#">new</a> |
+              <a href="#" onClick={() => setSortBy("created_at_i")}>
+                new
+              </a>{" "}
+              |
             </li>
             <li>
               {" "}
@@ -29,7 +33,10 @@ export default function Header() {
             </li>
             <li>
               {" "}
-              <a href="#">comments</a> |
+              <a href="#" onClick={() => setSortBy("num_comments")}>
+                comments
+              </a>{" "}
+              |
             </li>
             <li>
               {" "}

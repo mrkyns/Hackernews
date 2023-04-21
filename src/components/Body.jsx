@@ -1,12 +1,16 @@
 import Search from "./Search";
 import Pagination from "./Pagination";
-import { useEffect, useState, CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import NoResult from "./NoResult";
 
-export default function Body({ fetchedData, setQuery, loading, query }) {
+export default function Body({
+  fetchedData,
+  setQuery,
+  loading,
+  query,
+  sortBy,
+}) {
   const [hits, setHits] = useState([]);
-  const [noHits, setNoHits] = useState(false);
 
   const override = {
     display: "block",
@@ -15,17 +19,24 @@ export default function Body({ fetchedData, setQuery, loading, query }) {
 
   useEffect(() => {
     if (fetchedData.hits) setHits(fetchedData.hits);
-    if (fetchedData.nbHits === 0) {
-      setNoHits(true);
-    }
   }, [fetchedData]);
+
+  // console.log(noHits);
+
+  useEffect(() => {
+    setHits(
+      hits.sort((a, b) => {
+        return b[sortBy] - a[sortBy];
+      })
+    );
+    // console.log(sortBy);
+  }, [sortBy]);
 
   // console.log(fetchedData);
 
   return (
     <div className="Body">
       <Search fetchedData={fetchedData} setQuery={setQuery} />
-      {noHits ? <NoResult query={query} /> : null}
       <ClimbingBoxLoader
         color="var(--accent)"
         loading={loading}

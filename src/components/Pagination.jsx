@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Article from "./Article";
+import NoResult from "./NoResult";
 
 const hits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
@@ -46,46 +47,49 @@ export default function Pagination({ itemsPerPage, hits, setHits, query }) {
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    // console.log(
+    //   `User requested page number ${event.selected}, which is offset ${newOffset}`
+    // );
     setItemOffset(newOffset);
-    console.log(items);
+    // console.log(items);
   };
 
-  return (
-    <>
-      {/* <Items currentItems={currentItems} /> */}
-      <ol>
-        {currentItems.map((item, index) => (
-          <Article
-            articleNum={+itemOffset + index + 1}
-            title={item.title}
-            url={item.url}
-            points={item.points}
-            author={item.author}
-            time={Date.parse(item.created_at)}
-            comments={item.num_comments}
-            key={item.objectID}
-            id={item.objectID}
-            setHits={setHits}
-            query={query}
-          />
-        ))}
-      </ol>
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="next"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="previous"
-        renderOnZeroPageCount={null}
-      />
-    </>
-  );
+  if (items.length) {
+    return (
+      <>
+        {/* <Items currentItems={currentItems} /> */}
+        <ol>
+          {currentItems.map((item, index) => (
+            <Article
+              articleNum={itemOffset + index + 1}
+              title={item.title}
+              url={item.url}
+              points={item.points}
+              author={item.author}
+              time={Date.parse(item.created_at)}
+              comments={item.num_comments}
+              key={item.objectID}
+              id={item.objectID}
+              setHits={setHits}
+              query={query}
+            />
+          ))}
+        </ol>
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="next"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="previous"
+          renderOnZeroPageCount={null}
+        />
+      </>
+    );
+  } else {
+    return <NoResult />;
+  }
 }
-
 // Add a <div id="container"> to your HTML to see the component rendered.
 // ReactDOM.render(
 //   <PaginatedItems itemsPerPage={4} />,

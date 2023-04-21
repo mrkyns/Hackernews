@@ -10,13 +10,13 @@ function App() {
   const [query, setQuery] = useState("");
   const [hitsPerPage, setHitsPerPage] = useState(1000);
   const [pageNum, setPageNum] = useState(0);
+  const [isLoadingFront, setIsLoadingFront] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [sortBy, setSortBy] = useState("");
 
-  const fetchData = async function (queryWord, hitsPerPage, pageNum) {
+  const fetchData = async function (url) {
     try {
-      const res = await fetch(
-        `http://hn.algolia.com/api/v1/search?query=${queryWord}&hitsPerPage=${hitsPerPage}&page=${pageNum}`
-      );
+      const res = await fetch(url);
       const data = await res.json();
       setLoading(false);
       setFetchedData(data);
@@ -25,13 +25,36 @@ function App() {
     }
   };
 
+  const fetchFrontPage = async function () {
+    fetchData(
+      `http://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=100`
+    );
+  };
+
+  const fetchByQuery = (queryWord, hitsPerPage, pageNum) => {
+    fetchData(
+      `http://hn.algolia.com/api/v1/search?query=${queryWord}&hitsPerPage=${hitsPerPage}&page=${pageNum}`
+    );
+  };
+
   useEffect(() => {
-    fetchData(query, hitsPerPage, pageNum);
-  }, [query, hitsPerPage, pageNum]);
+    if (isLoadingFront) return;
+    fetchByQuery(query, hitsPerPage, pageNum);
+  }, [query]);
+
+  // first Run
+  useEffect(() => {
+    fetchFrontPage();
+    setIsLoadingFront(false);
+  }, [isLoadingFront]);
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        setIsLoadingFront={setIsLoadingFront}
+        fetchedData={fetchedData}
+        setSortBy={setSortBy}
+      />
 
       <Body
         fetchedData={fetchedData}
@@ -41,6 +64,7 @@ function App() {
         setHitsPerPage={setHitsPerPage}
         setPageNum={setPageNum}
         loading={loading}
+        filterBy={sortBy}
         query={query}
       />
       <Footer />

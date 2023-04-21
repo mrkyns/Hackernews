@@ -49,7 +49,8 @@ export default function Article({
     slicedTitle,
   ];
 
-  const dummyDelimiter = "*".repeat(query.length);
+  // Case sensitivity
+  const dummyDelimiter = query && "*".repeat(query.length);
   const titleArr = partitionedByQueryWord
     .join(dummyDelimiter)
     .split("")
@@ -59,11 +60,11 @@ export default function Article({
     })
     .join("")
     .split(dummyDelimiter);
+  /////
 
-  const originalQueryWord = slicedTitle?.slice(
-    titleArr[0].length,
-    titleArr[0].length + query.length
-  );
+  const originalQueryWord =
+    query &&
+    slicedTitle?.slice(titleArr[0].length, titleArr[0].length + query.length);
 
   const urlText = url?.split("/")[2];
 
@@ -77,7 +78,7 @@ export default function Article({
           target="_blank"
           rel="noreferrer"
         >
-          {!title && "Article has been removed :("}
+          <h3>{!title && "Article has been removed :("}</h3>
           <h3>
             {titleArr.map((part, index) => (
               <>
