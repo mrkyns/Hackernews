@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Search({ setQuery }) {
+export default function Search({ setQuery, setLoading }) {
   const [inputText, setInputText] = useState("");
 
   let inputHandler = (e) => {
@@ -13,7 +13,9 @@ export default function Search({ setQuery }) {
 
   let submitHandler = (e) => {
     e.preventDefault();
+    setLoading(true);
     setQuery(inputText);
+    setInputText("");
   };
 
   return (
@@ -25,6 +27,7 @@ export default function Search({ setQuery }) {
           type="search"
           placeholder="Enter your query"
           onChange={inputHandler}
+          value={inputText}
         />
         <button className="search_button">Search</button>
       </form>
