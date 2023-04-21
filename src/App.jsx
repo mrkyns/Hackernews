@@ -4,7 +4,6 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Reagan from "./components/Reagan";
-import Pagination from "./components/Pagination";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
@@ -22,7 +21,7 @@ function App() {
       setLoading(false);
       setFetchedData(data);
     } catch (err) {
-      // console.error(err);
+      console.error(err);
     }
   };
 

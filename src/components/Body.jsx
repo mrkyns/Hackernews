@@ -20,7 +20,7 @@ export default function Body({ fetchedData, setQuery, loading, query }) {
     }
   }, [fetchedData]);
 
-  console.log(fetchedData);
+  // console.log(fetchedData);
 
   return (
     <div className="Body">
@@ -34,7 +34,12 @@ export default function Body({ fetchedData, setQuery, loading, query }) {
       />
 
       <div className="pagination">
-        <Pagination setHits={setHits} itemsPerPage={20} hits={hits} />
+        <Pagination
+          setHits={setHits}
+          itemsPerPage={20}
+          hits={hits}
+          query={query}
+        />
       </div>
     </div>
   );

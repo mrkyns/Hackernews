@@ -375,6 +375,10 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+.Article__highlight {
+  color: var(--accent_light);
+}
+
 /* ==============================
             Pagination
 ============================== */
