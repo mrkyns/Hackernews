@@ -39,7 +39,8 @@ function App() {
 
   useEffect(() => {
     if (isLoadingFront) return;
-    fetchByQuery(query, hitsPerPage, pageNum);
+    if (query) fetchByQuery(query, hitsPerPage, pageNum);
+    else fetchFrontPage();
   }, [query]);
 
   // first Run
@@ -66,6 +67,7 @@ function App() {
         loading={loading}
         filterBy={sortBy}
         query={query}
+        setLoading={setLoading}
       />
       <Footer />
       <Reagan />
