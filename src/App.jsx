@@ -11,6 +11,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [hitsPerPage, setHitsPerPage] = useState(1000);
   const [pageNum, setPageNum] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async function (queryWord, hitsPerPage, pageNum) {
     try {
@@ -18,6 +19,7 @@ function App() {
         `http://hn.algolia.com/api/v1/search?query=${queryWord}&hitsPerPage=${hitsPerPage}&page=${pageNum}`
       );
       const data = await res.json();
+      setLoading(false);
       setFetchedData(data);
     } catch (err) {
       // console.error(err);
@@ -31,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <Body
         fetchedData={fetchedData}
         hits={fetchedData.hits}
@@ -38,6 +41,7 @@ function App() {
         setQuery={setQuery}
         setHitsPerPage={setHitsPerPage}
         setPageNum={setPageNum}
+        loading={loading}
       />
       <Footer />
       <Reagan />
