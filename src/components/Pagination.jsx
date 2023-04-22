@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import Article from "./Article";
 import NoResult from "./NoResult";
@@ -27,6 +27,7 @@ export default function Pagination({
   setObjectID,
   objectID,
   fetchedComments,
+  setLoading,
 }) {
   const items = objectID !== "" ? fetchedComments.hits : hits;
 
@@ -71,11 +72,28 @@ export default function Pagination({
     if (objectID) {
       return (
         <>
-          <button onClick={handleBack}>Back</button>
-          <h2>{fetchedComments.hits[0].story_title}</h2>
-          {fetchedComments.hits.map((comment) => (
-            <Comments author={comment.author} text={comment.comment_text} />
+          <button className="btn--back" onClick={handleBack}>
+            Back
+          </button>
+          <h2 className="Comment__title">
+            {fetchedComments.hits[0].story_title}
+          </h2>
+          {currentItems.map((comment, index) => (
+            <Comments
+              author={comment.author}
+              text={comment.comment_text}
+              key={comment.author + index}
+            />
           ))}
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="next"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="previous"
+            renderOnZeroPageCount={null}
+          />
         </>
       );
     } else {
@@ -91,11 +109,12 @@ export default function Pagination({
                 author={item.author}
                 time={Date.parse(item.created_at)}
                 comments={item.num_comments}
-                key={item.objectID}
+                key={item.created_at_i}
                 id={item.objectID}
                 setHits={setHits}
                 query={query}
                 setObjectID={setObjectID}
+                setLoading={setLoading}
               />
             ))}
           </ol>

@@ -13,6 +13,7 @@ export default function Article({
   setHits,
   query,
   setObjectID,
+  setLoading,
 }) {
   const [displayedPoints, setDisplayedPoints] = useState(points);
   const [arePointsIncreased, setArePointsIncreased] = useState(false);
@@ -69,7 +70,10 @@ export default function Article({
 
   const urlText = url?.split("/")[2];
 
-  const handleFetchComments = () => setObjectID(id);
+  const handleFetchComments = () => {
+    setObjectID(id);
+    setLoading(true);
+  };
 
   return (
     <li className="Article__wrapper">

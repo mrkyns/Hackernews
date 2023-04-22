@@ -515,3 +515,49 @@ nav ul li a:hover {
 .Footer-list ul li a:hover {
   color: var(--accent);
 }
+
+.Comment {
+  flex-direction: column;
+  padding: 1.5rem;
+  max-width: 800px;
+  align-items: start;
+  color: var(--text);
+}
+
+/* .Comment * { */
+/* } */
+
+.Comment a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.Comment a:hover {
+  color: var(--accent_light);
+  text-decoration: underline;
+}
+
+.Comment__title {
+  color: var(--accent);
+  margin-top: 1.5rem;
+}
+
+.btn--back {
+  position: absolute;
+  top: 5.5rem;
+  left: 3rem;
+  border: 2px solid var(--accent_border);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.btn--back:hover {
+  background: var(--accent_light);
+  color: var(--text_light);
+  border: 3px solid var(--text_light);
+}

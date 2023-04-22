@@ -41,7 +41,7 @@ function App() {
 
   const fetchComments = (objectID) => {
     fetchData(
-      `http://hn.algolia.com/api/v1/search?tags=comment,story_${objectID}`,
+      `http://hn.algolia.com/api/v1/search?hitsPerPage=1000&tags=comment,story_${objectID}`,
       false
     );
   };

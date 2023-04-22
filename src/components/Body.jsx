@@ -63,6 +63,7 @@ export default function Body({
             setObjectID={setObjectID}
             objectID={objectID}
             fetchedComments={fetchedComments}
+            setLoading={setLoading}
           />
         </div>
       )}
