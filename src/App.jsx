@@ -7,19 +7,21 @@ import Reagan from "./components/Reagan";
 
 function App() {
   const [fetchedData, setFetchedData] = useState([]);
+  const [fetchedComments, setFetchedComments] = useState([]);
   const [query, setQuery] = useState("");
+  const [objectID, setObjectID] = useState("");
   const [hitsPerPage, setHitsPerPage] = useState(1000);
   const [pageNum, setPageNum] = useState(0);
   const [isLoadingFront, setIsLoadingFront] = useState(true);
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState("");
 
-  const fetchData = async function (url) {
+  const fetchData = async function (url, loadingData = true) {
     try {
       const res = await fetch(url);
       const data = await res.json();
       setLoading(false);
-      setFetchedData(data);
+      loadingData ? setFetchedData(data) : setFetchedComments(data);
     } catch (err) {
       console.error(err);
     }
@@ -37,6 +39,13 @@ function App() {
     );
   };
 
+  const fetchComments = (objectID) => {
+    fetchData(
+      `http://hn.algolia.com/api/v1/search?tags=comment,story_${objectID}`,
+      false
+    );
+  };
+
   useEffect(() => {
     if (isLoadingFront) return;
     if (query) fetchByQuery(query, hitsPerPage, pageNum);
@@ -49,12 +58,19 @@ function App() {
     setIsLoadingFront(false);
   }, [isLoadingFront]);
 
+  // fetch Comments
+  useEffect(() => {
+    if (isLoadingFront) return;
+    fetchComments(objectID);
+  }, [objectID]);
+
   return (
     <div className="App">
       <Header
         setIsLoadingFront={setIsLoadingFront}
         fetchedData={fetchedData}
         setSortBy={setSortBy}
+        setObjectID={setObjectID}
       />
 
       <Body
@@ -68,6 +84,9 @@ function App() {
         filterBy={sortBy}
         query={query}
         setLoading={setLoading}
+        setObjectID={setObjectID}
+        objectID={objectID}
+        fetchedComments={fetchedComments}
       />
       <Footer />
       <Reagan />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Search({ setQuery, setLoading }) {
+export default function Search({ setQuery, setLoading, setObjectID }) {
   const [inputText, setInputText] = useState("");
 
   let inputHandler = (e) => {
@@ -15,6 +15,7 @@ export default function Search({ setQuery, setLoading }) {
     e.preventDefault();
     setLoading(true);
     setQuery(inputText);
+    setObjectID("");
     setInputText("");
   };
 

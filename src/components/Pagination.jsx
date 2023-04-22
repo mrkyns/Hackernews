@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Article from "./Article";
 import NoResult from "./NoResult";
+import Comments from "./Comments";
 
 const hits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
@@ -18,8 +19,16 @@ function Items({ currentItems }) {
   );
 }
 
-export default function Pagination({ itemsPerPage, hits, setHits, query }) {
-  const items = hits;
+export default function Pagination({
+  itemsPerPage,
+  hits,
+  setHits,
+  query,
+  setObjectID,
+  objectID,
+  fetchedComments,
+}) {
+  const items = objectID !== "" ? fetchedComments.hits : hits;
 
   function Items({ currentItems }) {
     return (
@@ -41,8 +50,8 @@ export default function Pagination({ itemsPerPage, hits, setHits, query }) {
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = items.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(items.length / itemsPerPage);
+  const currentItems = items?.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(items?.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
@@ -54,38 +63,54 @@ export default function Pagination({ itemsPerPage, hits, setHits, query }) {
     // console.log(items);
   };
 
-  if (items.length) {
-    return (
-      <>
-        {/* <Items currentItems={currentItems} /> */}
-        <ol>
-          {currentItems.map((item, index) => (
-            <Article
-              articleNum={itemOffset + index + 1}
-              title={item.title}
-              url={item.url}
-              points={item.points}
-              author={item.author}
-              time={Date.parse(item.created_at)}
-              comments={item.num_comments}
-              key={item.objectID}
-              id={item.objectID}
-              setHits={setHits}
-              query={query}
-            />
+  const handleBack = () => {
+    setObjectID("");
+  };
+
+  if (items?.length > 0) {
+    if (objectID) {
+      return (
+        <>
+          <button onClick={handleBack}>Back</button>
+          <h2>{fetchedComments.hits[0].story_title}</h2>
+          {fetchedComments.hits.map((comment) => (
+            <Comments author={comment.author} text={comment.comment_text} />
           ))}
-        </ol>
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel="previous"
-          renderOnZeroPageCount={null}
-        />
-      </>
-    );
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ol>
+            {currentItems.map((item, index) => (
+              <Article
+                articleNum={itemOffset + index + 1}
+                title={item.title}
+                url={item.url}
+                points={item.points}
+                author={item.author}
+                time={Date.parse(item.created_at)}
+                comments={item.num_comments}
+                key={item.objectID}
+                id={item.objectID}
+                setHits={setHits}
+                query={query}
+                setObjectID={setObjectID}
+              />
+            ))}
+          </ol>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="next"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="previous"
+            renderOnZeroPageCount={null}
+          />
+        </>
+      );
+    }
   } else {
     return <NoResult />;
   }
