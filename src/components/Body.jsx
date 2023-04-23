@@ -57,7 +57,7 @@ export default function Body({
         <div className="pagination">
           <Pagination
             setHits={setHits}
-            itemsPerPage={20}
+            itemsPerPage={objectID ? 6 : 20}
             hits={hits}
             query={query}
             setObjectID={setObjectID}

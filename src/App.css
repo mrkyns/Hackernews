@@ -544,7 +544,7 @@ nav ul li a:hover {
 }
 
 .btn--back {
-  position: absolute;
+  position: fixed;
   top: 5.5rem;
   left: 3rem;
   border: 2px solid var(--accent_border);
