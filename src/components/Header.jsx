@@ -1,9 +1,14 @@
-export default function Header({ setIsLoadingFront, setSortBy }) {
+export default function Header({ setIsLoadingFront, setSortBy, setObjectID }) {
+  const handleFrontLoad = () => {
+    setIsLoadingFront(true);
+    setObjectID("");
+  };
+
   return (
     <div className="Header">
       <div className="navigation">
         <svg
-          onClick={() => setIsLoadingFront(true)}
+          onClick={handleFrontLoad}
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +24,7 @@ export default function Header({ setIsLoadingFront, setSortBy }) {
           </g>
         </svg>
         <nav>
-          <span onClick={() => setIsLoadingFront(true)}>Hacker News</span>
+          <span onClick={handleFrontLoad}>Hacker News</span>
           <ul>
             <li>
               <a href="#" onClick={() => setSortBy("created_at_i")}>

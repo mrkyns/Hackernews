@@ -12,6 +12,8 @@ export default function Article({
   id,
   setHits,
   query,
+  setObjectID,
+  setLoading,
 }) {
   const [displayedPoints, setDisplayedPoints] = useState(points);
   const [arePointsIncreased, setArePointsIncreased] = useState(false);
@@ -68,6 +70,11 @@ export default function Article({
 
   const urlText = url?.split("/")[2];
 
+  const handleFetchComments = () => {
+    setObjectID(id);
+    setLoading(true);
+  };
+
   return (
     <li className="Article__wrapper">
       <span className="Article__num">{articleNum}.</span>
@@ -104,7 +111,10 @@ export default function Article({
           <span className="Article__hide" onClick={hide}>
             hide
           </span>{" "}
-          | <span>{comments}</span> Comments
+          |{" "}
+          <span className="Article__hide" onClick={handleFetchComments}>
+            {comments} Comments
+          </span>
         </p>
       </div>
       <button className="Article__btn-up" onClick={increasePoints}>

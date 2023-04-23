@@ -10,6 +10,9 @@ export default function Body({
   query,
   sortBy,
   setLoading,
+  fetchedComments,
+  setObjectID,
+  objectID,
 }) {
   const [hits, setHits] = useState([]);
 
@@ -41,6 +44,7 @@ export default function Body({
         fetchedData={fetchedData}
         setQuery={setQuery}
         setLoading={setLoading}
+        setObjectID={setObjectID}
       />
       <ClimbingBoxLoader
         color="var(--accent)"
@@ -53,9 +57,13 @@ export default function Body({
         <div className="pagination">
           <Pagination
             setHits={setHits}
-            itemsPerPage={20}
+            itemsPerPage={objectID ? 6 : 20}
             hits={hits}
             query={query}
+            setObjectID={setObjectID}
+            objectID={objectID}
+            fetchedComments={fetchedComments}
+            setLoading={setLoading}
           />
         </div>
       )}
