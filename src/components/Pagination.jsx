@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Article from "./Article";
 import NoResult from "./NoResult";
@@ -67,6 +67,10 @@ export default function Pagination({
   const handleBack = () => {
     setObjectID("");
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [currentItems]);
 
   if (items?.length > 0) {
     if (objectID) {
