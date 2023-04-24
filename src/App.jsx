@@ -29,19 +29,19 @@ function App() {
 
   const fetchFrontPage = async function () {
     fetchData(
-      `http://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=100`
+      `https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=100`
     );
   };
 
   const fetchByQuery = (queryWord, hitsPerPage, pageNum) => {
     fetchData(
-      `http://hn.algolia.com/api/v1/search?query=${queryWord}&hitsPerPage=${hitsPerPage}&page=${pageNum}`
+      `https://hn.algolia.com/api/v1/search?query=${queryWord}&hitsPerPage=${hitsPerPage}&page=${pageNum}`
     );
   };
 
   const fetchComments = (objectID) => {
     fetchData(
-      `http://hn.algolia.com/api/v1/search?hitsPerPage=1000&tags=comment,story_${objectID}`,
+      `https://hn.algolia.com/api/v1/search?hitsPerPage=1000&tags=comment,story_${objectID}`,
       false
     );
   };
