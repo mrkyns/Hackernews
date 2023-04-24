@@ -519,7 +519,7 @@ nav ul li a:hover {
 .Comment {
   flex-direction: column;
   padding: 1.5rem;
-  max-width: 800px;
+  width: 1000px;
   align-items: start;
   color: var(--text);
 }
